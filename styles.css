@@ -283,6 +283,246 @@ img {
     font-size: 0.9rem;
 }
 
+/* Generic content sections (Film, Jeries, Buy Music, Gallery, Videos, Collabs, Press) */
+.alt-bg { background-color: #111; }
+
+.section-intro {
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: -2rem 0 3rem;
+    font-size: 1.05rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.info-card {
+    background: #1a1a1a;
+    border-radius: 8px;
+    padding: 1.8rem;
+    transition: var(--transition);
+}
+
+.alt-bg .info-card { background: #161616; }
+
+.info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+.info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.6rem;
+    font-weight: 700;
+}
+
+.info-card .meta {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+    display: block;
+}
+
+.info-card p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.info-card p:last-of-type { margin-bottom: 0; }
+
+.card-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.card-links a {
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 30px;
+}
+
+.card-links a:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.placeholder-badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    border: 1px dashed rgba(255,255,255,0.3);
+    border-radius: 30px;
+    padding: 0.4rem 0.9rem;
+    margin-top: 1rem;
+}
+
+/* Album Story Accordion */
+.album-story {
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+}
+
+.album-story summary {
+    cursor: pointer;
+    list-style: none;
+    padding: 1.5rem 2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.album-story summary::-webkit-details-marker { display: none; }
+
+.album-story summary .year-tag {
+    color: var(--text-muted);
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.album-story summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    color: var(--text-muted);
+}
+
+.album-story[open] summary::after {
+    content: '\2212';
+}
+
+.album-story-body {
+    padding: 0 2rem 2rem;
+}
+
+.album-story-body h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin: 1.5rem 0 0.6rem;
+}
+
+.album-story-body h4:first-child { margin-top: 0; }
+
+.album-story-body p, .album-story-body li {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.album-story-body ul {
+    padding-left: 1.2rem;
+}
+
+html[dir="rtl"] .album-story-body ul {
+    padding-left: 0;
+    padding-right: 1.2rem;
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: grayscale(60%);
+    transition: var(--transition);
+}
+
+.gallery-grid img:hover {
+    filter: grayscale(0%);
+}
+
+.gallery-credit {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+}
+
+/* Video / Press lists */
+.list-block {
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1.3rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.list-item .list-title {
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.list-item .list-sub {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.list-item .year-tag {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    min-width: 3.5rem;
+}
+
+/* Buy Music CTA */
+.buy-cta {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.buy-cta p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+.buy-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2.5rem;
+    background: var(--text-color);
+    color: var(--bg-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 30px;
+}
+
+.buy-button:hover {
+    background: var(--text-muted);
+}
+
 /* Footer Section */
 .footer {
     padding: 5rem 0 2rem;
